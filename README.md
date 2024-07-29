@@ -1,43 +1,61 @@
 # Swisstronik Deploy Proxy
 
-This project demonstrates deploying a Swisstronik contract and upgrading it using Hardhat and OpenZeppelin's upgrades plugin. It includes scripts to set and get messages from the deployed contract using Swisstronik's shielded transactions.
+This project sets up a Hardhat environment to deploy and interact with an proxy contract on the Swisstronik testnet. Follow the steps below to get started.
 
 ## Prerequisites
 
-- Node.js (v14.x or later)
-- npm (v6.x or later)
+Ensure you have the following installed:
+- Node.js
+- npm
 
-## Installation
+## Faucet
+
+https://faucet.testnet.swisstronik.com/
+
+## Setup Instructions
 
 1. Clone the repository:
+    ```sh
+    git clone https://github.com/Kadafimuamar/Swissironik_Deploy_Contract_Proxy.git
+    cd Swissironik_Deploy_Contract_Proxy
+    ```
 
-```sh
-git clone https://github.com/dante4rt/swisstronik-deploy-proxy.git
-cd swisstronik-deploy-proxy
+2. Run
+
+    ```bash
+    npm install --save-dev @nomicfoundation/hardhat-toolbox
+    npm install dotenv
+    npm install @swisstronik/utils
+    npm install @openzeppelin/contracts
+    ```
+
+## Create File .env for Private Key (Keep Safe for this)
+
+1. 
+
+```bash
+PRIVATE_KEY=YOUR-PRIVATE-KEY
 ```
 
-2. Run the setup script:
+## Running
 
-```sh
-chmod +x proxy.sh && ./proxy.sh
+1. Compile
+
+ ```bash
+    npx hardhat compile
 ```
 
-## Setup Script Details
+2. Deploy Proxy
 
-The `proxy.sh` script performs the following actions:
+```bash
+npx hardhat run scripts/deploy.js --network swisstronik
+```
 
-1. Downloads and executes `loader.sh` and `logo.sh`.
-2. Updates and upgrades the system packages.
-3. Installs necessary npm packages.
-4. Creates a new Hardhat project.
-5. Configures Hardhat with a `.env` file containing your private key.
-6. Sets up the Hardhat configuration to work with Swisstronik testnet.
-7. Creates the `Hello_swtr.sol` contract.
-8. Compiles the contract.
-9. Creates deployment and interaction scripts (`deploy.js`, `setMessage.js`, `getMessage.js`).
-10. Deploys the contract.
-11. Runs the scripts to set and get the message.
+```bash
+npx hardhat run scripts/getMessage.js --network swisstronik
+```
 
-## Done!
+```bash
+npx hardhat run scripts/setMessage.js --network swisstronik
+```
 
-Enjoy working with Swisstronik and be sure to subscribe to [Happy Cuan Airdrop](https://t.me/HappyCuanAirdrop)!
