@@ -1,0 +1,2 @@
+0x50939f80C14E5E96cA6639743b6E2FBc59E7bf20
+https://explorer-evm.testnet.swisstronik.com/address/0x50939f80C14E5E96cA6639743b6E2FBc59E7bf20
