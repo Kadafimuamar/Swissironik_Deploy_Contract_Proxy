@@ -15,7 +15,7 @@ https://faucet.testnet.swisstronik.com/
 ## Setup Instructions
 
 1. Clone the repository:
-    ```sh
+    ```bash
     git clone https://github.com/Kadafimuamar/Swissironik_Deploy_Contract_Proxy.git
     cd Swissironik_Deploy_Contract_Proxy
     ```
@@ -31,7 +31,7 @@ https://faucet.testnet.swisstronik.com/
 
 ## Create File .env for Private Key (Keep Safe for this)
 
-1. 
+1. Create .env File
 
 ```bash
 PRIVATE_KEY=YOUR-PRIVATE-KEY
